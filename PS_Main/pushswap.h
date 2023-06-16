@@ -6,7 +6,7 @@
 /*   By: dagabrie <dagabrie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/26 14:55:06 by dagabrie          #+#    #+#             */
-/*   Updated: 2023/06/08 18:51:58 by dagabrie         ###   ########.fr       */
+/*   Updated: 2023/06/15 20:06:36 by dagabrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,9 +59,10 @@ node_t*	create_new_node(int value);
 node_t*	lastonlist(node_t* head);
 node_t*	bforlastonlist(node_t* head);
 //Src_03.c
-void freeList(node_t *head);
-//       ---------------------------
+void 	freeList(node_t *head);
 void	ft_lstadd_front(node_t **lst, node_t *new);
 void	ft_lstdelone(node_t *lst, void (*del)(void *));
+//       ---------------------------
+
 	
 #endif
