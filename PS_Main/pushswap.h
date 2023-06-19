@@ -6,7 +6,7 @@
 /*   By: dagabrie <dagabrie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/26 14:55:06 by dagabrie          #+#    #+#             */
-/*   Updated: 2023/06/15 20:06:36 by dagabrie         ###   ########.fr       */
+/*   Updated: 2023/06/19 20:13:20 by dagabrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ int 	duble(char **arg, int num);
 int		max_min_int(char **arg, int num);
 //PS-Alg ---------------------------
 void	algorit (node_t *head_A, node_t *head_B);
-void	bigsort (node_t *head_A, node_t *head_B);
+void	bigsort (node_t **head_A, node_t **head_B);
 void	midiosort(node_t **head_A, node_t **head_B);
 void	smolsort(node_t **head_A, node_t **head_B);
 //PS-Mov ---------------------------
@@ -50,10 +50,10 @@ void 	inver_rotate(int num,node_t **head_A,node_t **head_B);
 //Src_01.c
 int		max_id(node_t* head);
 int		issorted(node_t* head);
-int		topourbotum(node_t* head, int id);
 void	get_id(node_t **head);
+int		is_up_or_down(node_t* head, int valor);
 //Src_02.c
-void	printlit (node_t *head);
+void	printlist(node_t *head);
 void	printlistid(node_t *head);
 node_t*	create_new_node(int value);
 node_t*	lastonlist(node_t* head);

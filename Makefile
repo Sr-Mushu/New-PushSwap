@@ -6,7 +6,7 @@
 #    By: dagabrie <dagabrie@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/03 15:59:45 by dagabrie          #+#    #+#              #
-#    Updated: 2023/06/16 14:27:39 by dagabrie         ###   ########.fr        #
+#    Updated: 2023/06/19 12:15:02 by dagabrie         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@
 
 # Compiler options
 CC = gcc
-CFLAGS = -Wall -Werror -Wextra
+CFLAGS = #-Wall -Werror -Wextra
 
 # Directories
 LIBFT_PATH = ./libft-ps
@@ -60,7 +60,6 @@ mv:
 	mv $(OBJ_FILES) $(OBJ_PATH)
 
 clean:
-	rm -f $(OBJS)
 	rm -rf $(OBJ_PATH)
 	make clean -C $(LIBFT_PATH)
 	make clean -C $(LIBPF_PATH)

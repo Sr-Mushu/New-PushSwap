@@ -6,7 +6,7 @@
 /*   By: dagabrie <dagabrie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 17:16:37 by dagabrie          #+#    #+#             */
-/*   Updated: 2023/06/08 18:48:29 by dagabrie         ###   ########.fr       */
+/*   Updated: 2023/06/19 20:19:10 by dagabrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int max_id(node_t* head)
     return(i);
 }
 
-#if 1
+#if 0
 int issorted(node_t* head)
 {
     node_t *tamp;
@@ -50,6 +50,8 @@ int issorted(node_t* head)
 int issorted(node_t* head)
 {
     node_t *tamp = head;
+    if(tamp == NULL)
+        return 0;
     while(tamp != NULL)
     {
         if (tamp->next != NULL && tamp->value > tamp->next->value)
@@ -60,33 +62,25 @@ int issorted(node_t* head)
 }
 #endif
 
-int topourbotum(node_t* head, int id)
+//>>: 1 esta na metade de cima
+int is_up_or_down(node_t* head,int valor)
 {
-    node_t *tmp;
-    int     i;
-    int     y;
+    node_t *tamp;
+    int i = 0;
 
-    i = 2 / max_id(head);
-    tmp = head;
-    while(y < i)
+    tamp = head;
+    while (tamp->next != NULL)
     {
-        if(tmp->id = id)
-            return(1);
-        y++;   
-        tmp = tmp->next;
+        if(tamp->id == valor)
+            break;
+        tamp = tamp->next;
+        i++;
     }
-    return(0);
-}
-
-int ith_digit_from_right(int v, int i)
-{
-	int pow = 1;	
-	while(i != 0)
-		{
-			pow = 10 * 10;
-			i--;
-		}
-	return (((int)(v/pow)) % 10);
+    
+    if(i > (max_id(head)/2))
+        return 0;
+    else    
+        return 1;
 }
 
 void get_id(node_t **head)

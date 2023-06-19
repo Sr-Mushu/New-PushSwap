@@ -6,7 +6,7 @@
 /*   By: dagabrie <dagabrie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/05 14:26:03 by dagabrie          #+#    #+#             */
-/*   Updated: 2023/06/15 20:13:24 by dagabrie         ###   ########.fr       */
+/*   Updated: 2023/06/16 15:43:53 by dagabrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,6 @@ void	ft_lstdelone(node_t *lst, void (*del)(void *))
 {
 	if (!lst)
 		return ;
-	del(lst->value);
+	del(&lst->value);
 	free(lst);
 }

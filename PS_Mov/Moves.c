@@ -6,7 +6,7 @@
 /*   By: dagabrie <dagabrie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/02 14:16:20 by dagabrie          #+#    #+#             */
-/*   Updated: 2023/06/08 18:48:23 by dagabrie         ###   ########.fr       */
+/*   Updated: 2023/06/19 14:57:11 by dagabrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,7 +78,7 @@ void rotate(int num,node_t **head_A,node_t **head_B)
 		ft_printf("rr\n");
 		
 	//RR
-	if(num == 1 || num == 3)//RA next 
+	if(num == 1 || num == 3 && (*head_A)->next != NULL)//RA next 
 	{
 		last = lastonlist(*head_A);
 		last->next = *head_A;
