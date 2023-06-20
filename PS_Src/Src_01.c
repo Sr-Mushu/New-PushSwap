@@ -6,7 +6,7 @@
 /*   By: dagabrie <dagabrie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 17:16:37 by dagabrie          #+#    #+#             */
-/*   Updated: 2023/06/19 20:19:10 by dagabrie         ###   ########.fr       */
+/*   Updated: 2023/06/20 12:49:12 by dagabrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,26 +27,6 @@ int max_id(node_t* head)
     return(i);
 }
 
-#if 0
-int issorted(node_t* head)
-{
-    node_t *tamp;
-    int     i;
-    
-    tamp = head;
-    i = 0;
-    
-    while(tamp != NULL)
-    {
-        if(tamp->id != i)
-            return(0);
-        tamp = tamp->next;
-        i++;
-    }
-    return(1);
-}
-
-#else
 int issorted(node_t* head)
 {
     node_t *tamp = head;
@@ -60,7 +40,6 @@ int issorted(node_t* head)
     }
     return 1;
 }
-#endif
 
 //>>: 1 esta na metade de cima
 int is_up_or_down(node_t* head,int valor)
