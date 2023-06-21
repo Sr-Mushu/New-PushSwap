@@ -6,7 +6,7 @@
 #    By: dagabrie <dagabrie@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/03 15:59:45 by dagabrie          #+#    #+#              #
-#    Updated: 2023/06/20 20:46:06 by dagabrie         ###   ########.fr        #
+#    Updated: 2023/06/21 11:14:48 by dagabrie         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,6 @@ OBJ_PATH = ./PS_OBJ
 MAIN_FILES = 	./PS_Main/Main.c 	\
 				./PS_Alg/Main_Alg.c \
 				./PS_Alg/Alg_Base.c \
-				./PS_Alg/Alg_100.c	\
 				./PS_Alg/Alg_Radix.c	\
 				./PS_Mov/Moves.c	\
 				./PS_Src/Src_01.c	\

@@ -6,7 +6,7 @@
 /*   By: dagabrie <dagabrie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/26 14:55:06 by dagabrie          #+#    #+#             */
-/*   Updated: 2023/06/19 20:13:20 by dagabrie         ###   ########.fr       */
+/*   Updated: 2023/06/21 20:14:50 by dagabrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,8 +38,8 @@ int		max_min_int(char **arg, int num);
 //PS-Alg ---------------------------
 void	algorit (node_t *head_A, node_t *head_B);
 void	bigsort (node_t **head_A, node_t **head_B);
-void	midiosort(node_t **head_A, node_t **head_B);
-void	smolsort(node_t **head_A, node_t **head_B);
+void	sort3(node_t **head_A, node_t **head_B,int max_id);
+void	smolsort(node_t **head_A, node_t **head_B,int max_id);
 //PS-Mov ---------------------------
 //Moves.c
 void 	swap (int num,node_t **head_A, node_t **head_B);
@@ -51,7 +51,7 @@ void 	inver_rotate(int num,node_t **head_A,node_t **head_B);
 int		max_id(node_t* head);
 int		issorted(node_t* head);
 void	get_id(node_t **head);
-int		is_up_or_down(node_t* head, int valor);
+int		is_up_or_down(node_t* head, int id);
 //Src_02.c
 void	printlist(node_t *head);
 void	printlistid(node_t *head);
@@ -62,6 +62,7 @@ node_t*	bforlastonlist(node_t* head);
 void 	freeList(node_t *head);
 void	ft_lstadd_front(node_t **lst, node_t *new);
 void	ft_lstdelone(node_t *lst, void (*del)(void *));
+void	checkpos(node_t **head_A, node_t **head_B, int max, int n);
 //       ---------------------------
 
 	
