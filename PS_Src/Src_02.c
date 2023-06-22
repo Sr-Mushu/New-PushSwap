@@ -6,7 +6,7 @@
 /*   By: dagabrie <dagabrie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 17:17:56 by dagabrie          #+#    #+#             */
-/*   Updated: 2023/06/22 18:41:09 by dagabrie         ###   ########.fr       */
+/*   Updated: 2023/06/22 22:19:10 by dagabrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,8 +65,10 @@ t_node	*bforlastonlist(t_node	*head)
 t_node	*create_new_node(int value)
 {
 	t_node	*result;
-
+	
 	result = malloc (sizeof(t_node));
+	if (!result)
+		return (NULL);
 	result->value = value;
 	result->next = NULL;
 	return (result);

@@ -6,7 +6,7 @@
 /*   By: dagabrie <dagabrie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/26 14:55:06 by dagabrie          #+#    #+#             */
-/*   Updated: 2023/06/22 18:40:03 by dagabrie         ###   ########.fr       */
+/*   Updated: 2023/06/22 22:14:23 by dagabrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 # include	<unistd.h>
 # include	"../ft_printf/ft_printf.h"
 # include	"../libft-ps/libft.h"
+
+//#define malloc(x) (void *)0
 
 //structs
 
@@ -35,7 +37,7 @@ int			frt_isdigit(char **arg, int num);
 int			duble(char **arg, int num);
 int			max_min_int(char **arg, int num);
 //PS-Alg ---------------------------
-void		algorit(t_node *head_A, t_node *head_B);
+void		algorit(t_node **head_A, t_node **head_B);
 void		bigsort(t_node **head_A, t_node **head_B);
 void		sort3(t_node **head_A, t_node **head_B, int max_id);
 void		smolsort(t_node	**head_A, t_node **head_B, int max_id);

@@ -6,7 +6,7 @@
 /*   By: dagabrie <dagabrie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/02 15:10:05 by dagabrie          #+#    #+#             */
-/*   Updated: 2023/06/22 18:42:30 by dagabrie         ###   ########.fr       */
+/*   Updated: 2023/06/22 22:25:18 by dagabrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,12 +27,17 @@ int	main(int numb_arg, char **arg)
 		while (numb_arg >= 2)
 		{
 			tmp = create_new_node(atoi(arg[i]));
+			if (!tmp)
+			{
+				freelist(head_a);
+				exit(EXIT_SUCCESS);
+			}
 			tmp->next = head_a;
 			head_a = tmp;
 			numb_arg--;
 			i--;
 		}
-		algorit (head_a, head_b);
+		algorit (&head_a, &head_b);
 		freelist (head_a);
 		return (1);
 	}
@@ -42,3 +47,21 @@ int	main(int numb_arg, char **arg)
 }
 
 //norminette /nfs/homes/dagabrie/Documents/Curce42/push_swap/new-code-ps/PS_Main
+
+
+void Src_main(t_node **tmp,)
+{
+	while (numb_arg >= 2)
+		{
+			*tmp = create_new_node(atoi(arg[i]));
+			if (!*tmp)
+			{
+				freelist(head_a);
+				exit(EXIT_SUCCESS);
+			}
+			(*tmp)->next = head_a;
+			head_a = *tmp;
+			numb_arg--;
+			i--;
+		}
+}

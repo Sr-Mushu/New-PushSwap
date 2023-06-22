@@ -6,7 +6,7 @@
 #    By: dagabrie <dagabrie@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/03 15:59:45 by dagabrie          #+#    #+#              #
-#    Updated: 2023/06/22 18:45:44 by dagabrie         ###   ########.fr        #
+#    Updated: 2023/06/22 21:48:52 by dagabrie         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@
 .SILENT:
 
 # Compiler options
-CC = gcc
+CC = cc
 CFLAGS = #-Wall -Werror -Wextra
 
 # Directories
@@ -46,7 +46,7 @@ OBJ_FILES = $(MAIN_FILES:.c=.o)
 all: pushswap mv
 
 pushswap: $(OBJ_FILES) $(LIBFT_LIB) $(LIBPF_LIB)
-	$(CC) $(CFLAGS) -o pushswap $^ $(LIBFT_LIB) $(LIBPF_LIB)
+	$(CC) $(CFLAGS) -o push_swap $^ $(LIBFT_LIB) $(LIBPF_LIB)
 
 $(LIBFT_LIB):
 	make -C $(LIBFT_PATH)
