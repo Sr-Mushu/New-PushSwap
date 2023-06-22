@@ -6,7 +6,7 @@
 #    By: dagabrie <dagabrie@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/03 15:59:45 by dagabrie          #+#    #+#              #
-#    Updated: 2023/06/22 13:34:33 by dagabrie         ###   ########.fr        #
+#    Updated: 2023/06/22 18:45:44 by dagabrie         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -74,6 +74,5 @@ re: fclean all
 
 
 
-# para correr por enquanto.
 # git status && git add * && git status && git commit -m "Date" && git push
 
