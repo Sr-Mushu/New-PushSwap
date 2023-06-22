@@ -1,8 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_startsign.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dagabrie <dagabrie@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/06/22 17:00:10 by dagabrie          #+#    #+#             */
+/*   Updated: 2023/06/22 17:00:37 by dagabrie         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 int	ft_startsign(int character)
 {
-	if (character == '-' || character =='+')
+	if (character == '-' || character == '+')
 		return (1);
 	return (0);
 }

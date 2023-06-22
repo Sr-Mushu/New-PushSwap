@@ -6,15 +6,17 @@
 /*   By: dagabrie <dagabrie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 17:17:56 by dagabrie          #+#    #+#             */
-/*   Updated: 2023/06/08 18:48:33 by dagabrie         ###   ########.fr       */
+/*   Updated: 2023/06/22 18:41:09 by dagabrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../PS_Main/pushswap.h"
 
-void printlist(node_t *head)
+void	printlist(t_node *head)
 {
-	node_t *temporary = head;
+	t_node	*temporary;
+
+	temporary = head;
 	while (temporary != NULL)
 	{
 		printf("[%d]->", temporary->value);
@@ -23,9 +25,11 @@ void printlist(node_t *head)
 	printf("[N]\n");
 }
 
-void printlistid(node_t *head)
+void	printlistid(t_node	*head)
 {
-	node_t *temporary = head;
+	t_node	*temporary;
+
+	temporary = head;
 	while (temporary != NULL)
 	{
 		printf("[%d]->", temporary->id);
@@ -34,26 +38,36 @@ void printlistid(node_t *head)
 	printf("[N]\n");
 }
 
-node_t* lastonlist(node_t* head) {
-    node_t* last = head;
-    while (last->next != NULL) {
-        last = last->next;
-    }
-    return last;
-}
-
-node_t* bforlastonlist(node_t* head) {
-    node_t* last = head;
-    while (last->next->next != NULL) {
-        last = last->next;
-    }
-    return last;
-}
-
-node_t *create_new_node(int value)
+t_node	*lastonlist(t_node *head)
 {
-    node_t *result = malloc(sizeof(node_t));
-    result->value = value;
-    result->next = NULL;
-    return result;
+	t_node	*last;
+
+	last = head;
+	while (last->next != NULL)
+	{
+		last = last->next;
+	}
+	return (last);
+}
+
+t_node	*bforlastonlist(t_node	*head)
+{
+	t_node	*last;
+
+	last = head;
+	while (last->next->next != NULL)
+	{
+		last = last->next;
+	}
+	return (last);
+}
+
+t_node	*create_new_node(int value)
+{
+	t_node	*result;
+
+	result = malloc (sizeof(t_node));
+	result->value = value;
+	result->next = NULL;
+	return (result);
 }

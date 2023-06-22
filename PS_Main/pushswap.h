@@ -6,64 +6,62 @@
 /*   By: dagabrie <dagabrie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/26 14:55:06 by dagabrie          #+#    #+#             */
-/*   Updated: 2023/06/21 20:14:50 by dagabrie         ###   ########.fr       */
+/*   Updated: 2023/06/22 18:40:03 by dagabrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MINITALK_H
-# define MINITALK_H
-# include <unistd.h>
-# include "../ft_printf/ft_printf.h"
-# include "../libft-ps/libft.h"
+#ifndef PUSHSWAP_H
+# define PUSHSWAP_H
+# include	<unistd.h>
+# include	"../ft_printf/ft_printf.h"
+# include	"../libft-ps/libft.h"
 
 //structs
 
-struct node
+struct s_node
 {
-	int id;
-	int value;
-	struct node* next;
+	int				id;
+	int				value;
+	struct s_node	*next;
 };
-typedef struct node node_t;
-
+typedef struct s_node	t_node;
 //PS-Val ---------------------------
 //Main_Val.c
-int 	validacion(int numb_arg,char **arg);
+int			validacion(int numb_arg, char **arg);
 //Src_Val.c
-int 	nullstr(char **arg, int num);
-int 	sinlcheck(char **arg, int num);
-int 	frt_isdigit(char **arg, int num);
-int 	duble(char **arg, int num);
-int		max_min_int(char **arg, int num);
+int			nullstr(char **arg, int num);
+int			sinlcheck(char **arg, int num);
+int			frt_isdigit(char **arg, int num);
+int			duble(char **arg, int num);
+int			max_min_int(char **arg, int num);
 //PS-Alg ---------------------------
-void	algorit (node_t *head_A, node_t *head_B);
-void	bigsort (node_t **head_A, node_t **head_B);
-void	sort3(node_t **head_A, node_t **head_B,int max_id);
-void	smolsort(node_t **head_A, node_t **head_B,int max_id);
+void		algorit(t_node *head_A, t_node *head_B);
+void		bigsort(t_node **head_A, t_node **head_B);
+void		sort3(t_node **head_A, t_node **head_B, int max_id);
+void		smolsort(t_node	**head_A, t_node **head_B, int max_id);
 //PS-Mov ---------------------------
 //Moves.c
-void 	swap (int num,node_t **head_A, node_t **head_B);
-void 	push (int num,node_t **head_A, node_t **head_B);
-void 	rotate(int num,node_t **head_A,node_t **head_B);
-void 	inver_rotate(int num,node_t **head_A,node_t **head_B);
+void		swap(int num, t_node **head_A, t_node **head_B);
+void		push(int num, t_node **head_A, t_node **head_B);
+void		rotate(int num, t_node **head_A, t_node **head_B);
+void		inver_rotate(int num, t_node **head_A, t_node **head_B);
 //PS-Src ---------------------------
 //Src_01.c
-int		max_id(node_t* head);
-int		issorted(node_t* head);
-void	get_id(node_t **head);
-int		is_up_or_down(node_t* head, int id);
+int			max_id(t_node *head);
+int			issorted(t_node *head);
+void		get_id(t_node **head);
+int			is_up_or_down(t_node *head, int id);
 //Src_02.c
-void	printlist(node_t *head);
-void	printlistid(node_t *head);
-node_t*	create_new_node(int value);
-node_t*	lastonlist(node_t* head);
-node_t*	bforlastonlist(node_t* head);
+void		printlist(t_node *head);
+void		printlistid(t_node *head);
+t_node		*create_new_node(int value);
+t_node		*lastonlist(t_node *head);
+t_node		*bforlastonlist(t_node *head);
 //Src_03.c
-void 	freeList(node_t *head);
-void	ft_lstadd_front(node_t **lst, node_t *new);
-void	ft_lstdelone(node_t *lst, void (*del)(void *));
-void	checkpos(node_t **head_A, node_t **head_B, int max, int n);
+void		freelist(t_node *head);
+void		ft_lstadd_front(t_node **lst, t_node *new);
+void		ft_lstdelone(t_node *lst, void (*del)(void *));
+void		checkpos(t_node **head_A, t_node **head_B, int max, int n);
 //       ---------------------------
 
-	
 #endif

@@ -1,27 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Alg_500.c                                          :+:      :+:    :+:   */
+/*   Alg_Radix.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dagabrie <dagabrie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/05 13:38:22 by dagabrie          #+#    #+#             */
-/*   Updated: 2023/06/20 16:07:38 by dagabrie         ###   ########.fr       */
+/*   Updated: 2023/06/22 18:41:53 by dagabrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../PS_Main/pushswap.h"
-void bigsort(node_t **head_A, node_t **head_B)
+
+void	bigsort(t_node **head_A, t_node **head_B)
 {
-	int p;
-	int i;
-	int Max = max_id(*head_A) + 1;
-	// radix	
+	int	p;
+	int	i;
+	int	max;
+
+	max = max_id(*head_A) + 1;
 	p = 0;
-	while(! issorted(*head_A))
-    {
+	while (! issorted(*head_A))
+	{
 		i = 0;
-		while (i < Max)
+		while (i < max)
 		{
 			if ((*head_A)->id >> p & 1)
 				rotate(1, head_A, head_B);
@@ -34,4 +36,3 @@ void bigsort(node_t **head_A, node_t **head_B)
 		p++;
 	}
 }
-
