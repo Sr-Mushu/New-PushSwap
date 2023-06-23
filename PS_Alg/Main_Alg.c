@@ -6,7 +6,7 @@
 /*   By: dagabrie <dagabrie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/02 13:55:03 by dagabrie          #+#    #+#             */
-/*   Updated: 2023/06/22 22:14:06 by dagabrie         ###   ########.fr       */
+/*   Updated: 2023/06/23 16:13:34 by dagabrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ void	algorit(t_node **head_A, t_node **head_B)
 
 	get_id (head_A);
 	size = max_id (*head_A) + 1;
+	if (issorted(*head_A))
+		return ;
 	if (size == 2)
 		swap (1, head_A, head_B);
 	else if (size == 3)

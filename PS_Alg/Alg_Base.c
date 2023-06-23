@@ -6,7 +6,7 @@
 /*   By: dagabrie <dagabrie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/05 13:39:42 by dagabrie          #+#    #+#             */
-/*   Updated: 2023/06/22 18:41:42 by dagabrie         ###   ########.fr       */
+/*   Updated: 2023/06/23 15:38:10 by dagabrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,8 @@
 
 void	sort3(t_node **head_A, t_node **head_B, int max)
 {
-	printlist (*head_A);
-	ft_printf ("aqui\n");
 	if (1 == issorted (*head_A))
 		return ;
-	ft_printf ("Max : %d\n", max);
 	if ((*head_A)->id == max)
 		rotate (1, head_A, head_B);
 	else if ((*head_A)->next->id == max)
@@ -34,7 +31,6 @@ void	smolsort(t_node **head_A, t_node **head_B, int max)
 	if ((max_id (*head_A) + 1) == 5)
 		checkpos (head_A, head_B, 0, 1);
 	checkpos (head_A, head_B, 1, 2);
-	ft_printf ("od? :%d \n", issorted (*head_A));
 	if (0 == issorted (*head_A))
 		sort3 (head_A, head_B, max);
 	while (*head_B)
