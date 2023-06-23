@@ -6,7 +6,7 @@
 #    By: dagabrie <dagabrie@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/03 15:59:45 by dagabrie          #+#    #+#              #
-#    Updated: 2023/06/22 21:48:52 by dagabrie         ###   ########.fr        #
+#    Updated: 2023/06/23 16:53:12 by dagabrie         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -64,7 +64,7 @@ clean:
 	make clean -C $(LIBPF_PATH)
 
 fclean: clean
-	rm -f pushswap
+	rm -f push_swap
 	make fclean -C $(LIBFT_PATH)
 	make fclean -C $(LIBPF_PATH)
 
