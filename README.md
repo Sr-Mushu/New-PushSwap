@@ -6,3 +6,5 @@ types of algorithms and choose the most appropriate solution (out of many) for a
 optimized data sorting. <br>
 ##
 Version: 6
+
+{42 Lisboa}
